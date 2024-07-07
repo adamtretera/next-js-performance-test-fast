@@ -4,6 +4,7 @@ import {getAllItems} from "@/lib/contentfull";
 import {CardList} from "@/components/card-list";
 import {Header} from "@/components/header";
 import {CommentSection} from "@/components/coment-section";
+import {MainImage} from "@/components/main-image";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -23,6 +24,7 @@ export default function Home({items}: {items:any[]}) {
   return (
    <main>
         <Header/>
+        <MainImage/>
         <CardList items={items}/>
 
        <div className={"flex container m-auto gap-3"}>
