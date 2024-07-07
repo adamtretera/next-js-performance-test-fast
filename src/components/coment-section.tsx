@@ -17,7 +17,7 @@ export const CommentSection = () => {
           rows={4}
           cols={50}
       />
-   <Picker     />
+   <Picker autoFocusSearch={false}     />
 
         </div>
     );
