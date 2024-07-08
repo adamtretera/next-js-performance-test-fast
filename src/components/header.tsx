@@ -44,7 +44,8 @@ export  function Header() {
                 <div className="flex lg:flex-1">
                     <a href="#" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
-                        <Image alt="" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"  width={50} height={50} className="h-8 w-auto" />
+                        <Image alt="" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"  width={32}
+                               height={32} className="h-8 w-auto" />
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -124,7 +125,9 @@ export  function Header() {
                     <div className="flex items-center justify-between">
                         <a href="#" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
-                            <img
+                            <Image
+                                width={32}
+                                height={32}
                                 alt=""
                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
                                 className="h-8 w-auto"
