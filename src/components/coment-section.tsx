@@ -1,13 +1,13 @@
 import dynamic from "next/dynamic";
+import {useState} from "react";
 
-const Picker = dynamic(
-    () => {
-        return import('emoji-picker-react');
-    },
-    { ssr: false }
-);
+
+
+const Picker = dynamic(() => import('emoji-picker-react'), { ssr: false })
+
 export const CommentSection = () => {
 
+    const [showMore, setShowMore] = useState(false)
 
 
     return (
@@ -17,7 +17,12 @@ export const CommentSection = () => {
           rows={4}
           cols={50}
       />
-   <Picker autoFocusSearch={false}     />
+
+            <div>
+                <button onClick={() => setShowMore(!showMore)}>Toggle</button>
+                {showMore &&  <Picker autoFocusSearch={false}     />}
+            </div>
+
 
         </div>
     );

@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 export function Card({title, description, image}: {title:string, description:string, image:string}) {
     return (
 
     <div className="max-w-sm rounded overflow-hidden shadow-lg">
-        <img className="w-full"src={image} alt={title}/>
+        <Image  className="w-full" src={"https:"+image} width={200} height={200} alt={title}/>
             <div className="px-6 py-4">
                 <div className="font-bold text-xl mb-2">
                     <h2>{title}</h2>

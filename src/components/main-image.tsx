@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Image from "next/image";
 
 export const MainImage = () => {
     const [imageLoaded, setImageLoaded] = useState(false);
@@ -13,15 +14,7 @@ export const MainImage = () => {
 
     return (
         <div className={"bg-blue-900 rounded px-4 container m-auto my-4"} style={{ width: '100%', textAlign: 'center' }}>
-            {imageLoaded ? (
-                <img
-                    src="https://via.placeholder.com/600x400"
-                    alt="Loaded content"
-                    style={{ width: '600px', height: '400px' }}
-                />
-            ) : (
-                <div style={{ height: '20px' }}>Loading...</div>
-            )}
+            <Image alt={"main image"}  src={imageLoaded ? "https://via.placeholder.com/600x400": ""} width={600} height={400} />
         </div>
     );
 };
