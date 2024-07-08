@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   optimizeFonts: false,
   images: {
-    domains: ["images.ctfassets.net", "via.placeholder.com"],
+    dangerouslyAllowSVG: true,
+    domains: ["images.ctfassets.net", "via.placeholder.com", "tailwindui.com"],
   },
 };
 
